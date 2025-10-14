@@ -10,7 +10,7 @@ import in.hotels.model.Hotels;
 import in.hotels.service.HotelService;
 @RestController
 @RequestMapping("/hotels")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"http://localhost:4200", "https://hotelbookingbysangram.netlify.app"})
 public class HotelController {
     @Autowired
     private final HotelService service;
