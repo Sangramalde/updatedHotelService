@@ -62,8 +62,11 @@ public class HotelService {
         return repo.findAll();
     }
 
-    // Search hotels by destination
     public List<Hotels> searchHotels(String destination) {
+        if (destination == null || destination.isEmpty()) {
+            return repo.findAll(); // fallback
+        }
         return repo.findByLocationContainingIgnoreCase(destination);
     }
+
 }
